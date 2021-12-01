@@ -4,7 +4,7 @@ services:
     build: fastAPI/.
     ports:
       - "5000:5000"
-  # webApp:
-  #   build: .
-  #   ports:
-  #     - "5000:5000"
+   webApp:
+     build: .
+     ports:
+       - "5000:5000"
