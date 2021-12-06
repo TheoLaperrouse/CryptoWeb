@@ -83,7 +83,7 @@
 
           <template slot="content">
             <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
+            <h3 class="title">{{this.info}}</h3>
           </template>
 
           <template slot="footer">
@@ -169,7 +169,7 @@ import {
   StatsCard,
   ChartCard,
 } from "@/components";
-
+import axios from 'axios'
 export default {
   components: {
     StatsCard,
@@ -177,6 +177,7 @@ export default {
   },
   data() {
     return {
+      info: null,
       dailySalesChart: {
         data: {
           labels: ["M", "T", "W", "T", "F", "S", "S"],
@@ -265,5 +266,10 @@ export default {
       },
     };
   },
+  mounted () {
+    axios
+      .get('http://127.0.0.1:5000/binance')
+      .then(response => (this.info = response))
+  }
 };
 </script>

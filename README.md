@@ -25,6 +25,7 @@ Launch app :
 ### Back End
 
 ```uvicorn main:app --host 0.0.0.0 --port 5000```
+
 ## Template
 
 Use of this template : https://github.com/creativetimofficial/vue-material-dashboard créé par Creative Tim
