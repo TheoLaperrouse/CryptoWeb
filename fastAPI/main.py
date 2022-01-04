@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from binance_infos import get_infos
+from binance_infos import get_infos, get_asset_info
 
 app = FastAPI()
 
@@ -27,4 +27,4 @@ def read_polychain():
 
 @app.get("/maiar")
 def read_maiar():
-    return {"EGLD": 0}
+    return get_asset_info()

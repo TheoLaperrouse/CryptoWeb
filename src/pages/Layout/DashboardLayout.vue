@@ -11,8 +11,12 @@
         <p>Tableau de Bord</p>
       </sidebar-link>
       <sidebar-link to="/polychain">
-        <md-icon>{{unicorn}}</md-icon>
+        <md-icon>dashboard</md-icon>
         <p>Polychain Monsters</p>
+      </sidebar-link>
+      <sidebar-link to="/binance">
+        <md-icon>dashboard</md-icon>
+        <p>Binance</p>
       </sidebar-link>
     </side-bar>
     <div class="main-panel">
@@ -38,7 +42,6 @@ export default {
   },
   data() {
     return {
-      unicorn,
       sidebarBackground: "green",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };

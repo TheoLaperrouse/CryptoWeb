@@ -9,3 +9,5 @@ client = Client(api_key, api_secret)
 def get_infos():
     return [[crypto['asset'],float(crypto['locked']) + float(crypto['free'])] for crypto in client.get_account()['balances'] if float(crypto['free']) > 0] 
 
+def get_asset_info():
+    return client.get_asset_balance(asset='BTC')
